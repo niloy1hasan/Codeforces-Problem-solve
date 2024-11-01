@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+  
+  int t;
+  scanf("%d", &t);
+  int a,b,i, l, all[t];
+    
+  if(t>=1 && t<=10000) {
+  
+  for(i=0; i<t; i++) {
+  scanf("%d %d", &a, &b); 
+  if(a>=1) {
+   l = b - a%b;   
+   all[i] = (b==l)? 0: l; 
+  }
+  
+  } 
+ }
+ 
+  for(i=0; i<t; i++) {   
+   printf("%d\n", all[i]); 
+  }
+  
+  return 0;
+}
