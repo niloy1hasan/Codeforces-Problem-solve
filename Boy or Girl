@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+void sortString(char string[], int size);
+int countString(char string[], int size);
+
+
+int main(void) {
+
+char name[101];
+scanf("%s", name);
+int size = strlen(name);
+
+if(size<=0 || size >100)
+    return 0;
+
+    sortString(name, size-1);
+  int count = countString(name, size);
+
+  if(count%2==0)
+    printf("CHAT WITH HER!\n");
+  else
+    printf("IGNORE HIM!\n");
+
+
+
+
+return 0;
+}
+
+int countString(char string[], int size){
+int count = 0;
+   int flag = 1;
+for(int i=0; i<size; i++){
+        flag = 1;
+ for(int j=0; j<i;j++){
+
+      if(string[j] == string[i]){
+        flag = 0;
+        break;
+      }
+ }
+ if(flag)
+    count++;
+}
+
+
+return count;
+}
+
+void sortString(char string[], int size){
+
+for(int i=0;i<size; i++){
+    for(int j=0; j<size-1; j++){
+        if(string[j] > string[j+1]){
+            char temp = string[j+1];
+            string[j+1] = string[j];
+            string[j] = temp;
+        }
+    }
+}
+
+}
