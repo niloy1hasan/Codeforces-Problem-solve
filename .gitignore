@@ -1,0 +1,62 @@
+# === OS/Editor Stuff ===
+.DS_Store
+Thumbs.db
+
+# === VSCode ===
+.vscode/
+*.code-workspace
+
+# === C/C++ ===
+*.out
+*.o
+*.obj
+*.exe
+*.a
+*.gch
+*.stackdump
+
+# === C# ===
+*.dll
+*.exe
+*.pdb
+*.cache
+*.config
+*.csproj.user
+*.userprefs
+
+# === Java ===
+*.class
+*.jar
+*.war
+*.ear
+
+# === Python ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# === Logs or Runtime Files ===
+*.log
+*.tmp
+*.swp
+
+# === General Backups ===
+*~
+*.bak
+*.old
+*.orig
+
+# === Build Tools Output ===
+build/
+dist/
+bin/
+obj/
+
+# === IDE/Project Files (if any) ===
+.idea/
+*.iml
+*.suo
+*.ncb
+*.sdf
+*.vcxproj.*
