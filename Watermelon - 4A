@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+  
+  int t, w,r=0;
+  scanf("%d", &w);
+  
+  if(w>=1 || w<=100) {
+    
+    for(int i=2; i<=w/2; i+=2) {
+    t = w - i;
+    if(t%2==0) {
+      r=1;
+      break;
+    }
+   }
+   
+   if(r==1) {
+     printf("Yes");
+   } 
+    
+    else{
+      printf("No");
+    }
+    
+  } 
+  return 0;
+}

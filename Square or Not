@@ -1,0 +1,57 @@
+#include <iostream>
+#include <cmath>
+#include <cstring>
+using namespace std;
+
+int main(){
+
+    int t;
+    cin >> t;
+
+    while(t--){
+        long int n;
+        cin >> n;
+        char s[n+1];
+        cin >> s;
+        float nr = sqrt(n);
+        if(nr*nr != n)
+          cout << "No\n";
+        else{
+            int flag = 1;
+            int nR = nr;
+            for(int i=0; i<nR; i++){
+                if(s[i]!='1'){
+                    flag = 0;
+                    break;
+                }
+            }
+            for(int i=nR; i<n-nR; i++){
+                if(i%nR==0){
+                if(s[nR]!='1'){
+                    flag=0;
+                    break;
+                }
+            } else{
+                if(s[i]!='0')
+                  flag=0;
+                  break;
+            }
+            }
+
+            for(int i=n-nR; i<n; i++){
+                if(s[i]!='1'){
+                    flag = 0;
+                    break;
+                }
+            }
+
+          if(flag==1)
+          cout << "Yes\n";
+          else
+          cout << "No\n";
+
+        }
+    }
+
+    return 0;
+}

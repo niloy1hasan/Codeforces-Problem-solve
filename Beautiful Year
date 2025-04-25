@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+  
+  int y;
+  scanf("%d", &y);
+   
+  int n = 0;
+  int a, b, c, d, f, z=y+1;
+  
+  if(y>=1000 && y<=9000) {
+       
+   while(n!=1) {
+     
+      a = z % 10;
+      b = (z/10)%10;
+      c = (z/100)%10;
+      d = (z/1000);
+      f=z;
+      if(a!=b && b!=c && c!=d && d!=a && b!=d && a!=c) {
+        n =1;
+      } 
+      
+      
+      
+      else {
+        z++;
+      }        
+   }
+  
+  printf("%d", f);
+    
+  } 
+  
+  return 0;
+}
